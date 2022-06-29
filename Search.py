@@ -292,7 +292,6 @@ if st.sidebar.button("検索開始"):
                 count += 1
 
                 progress = int((count) /( all_page * max_list)*100)
-                st.write(progress)
 
                 if page ==1:
                     driver.get(url + '/' + url_category + '/')
