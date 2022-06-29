@@ -282,7 +282,7 @@ if st.sidebar.button("検索開始"):
         item_number_list = list()
         # st.success("検索ツール立ち上げ完了")
     
-    all_page = int(max_page[1])-int(max_page[0])-1
+    all_page = int(max_page[1])-int(max_page[0])+1
     count = 0
     st.markdown("2. 問い合わせページを検索します。")
     with st.spinner("問い合わせページを検索中..."):
