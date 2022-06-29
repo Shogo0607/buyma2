@@ -282,6 +282,7 @@ if st.sidebar.button("検索開始"):
         item_number_list = list()
         # st.success("検索ツール立ち上げ完了")
     
+    all_page = int(max_page[1])-int(max_page[0])
     count = 0
     st.markdown("2. 問い合わせページを検索します。")
     with st.spinner("問い合わせページを検索中..."):
@@ -290,7 +291,7 @@ if st.sidebar.button("検索開始"):
                 
                 count += 1
 
-                progress = int((count) /((int(max_page[1])-int(max_page[0])) * max_list)*100)
+                progress = int((count) /( all_page * max_list)*100)
                 st.write(progress)
 
                 if page ==1:
