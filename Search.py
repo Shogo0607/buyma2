@@ -285,11 +285,11 @@ if st.sidebar.button("検索開始"):
     count = 0
     st.markdown("2. 問い合わせページを検索します。")
     with st.spinner("問い合わせページを検索中..."):
-        for page in range(1,max_page+1):  #商品のページ数
+        for page in range(int(max_page[0]),int(max_page[1])+1):  #商品のページ数
             for shop_id in range(1,max_list+1):  #1ページの最大掲載数
                 
                 count += 1
-                progress = int((count) /(max_page * max_list)*100)
+                progress = int((count) /((int(max_page[1])-int(max_page[0])) * max_list)*100)
                 
 
                 if page ==1:
