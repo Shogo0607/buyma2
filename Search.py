@@ -289,8 +289,9 @@ if st.sidebar.button("検索開始"):
             for shop_id in range(1,max_list+1):  #1ページの最大掲載数
                 
                 count += 1
-                progress = int((count) /((int(max_page[1])-int(max_page[0])-1) * max_list)*100)
-                
+
+                progress = int((count) /((int(max_page[1])-int(max_page[0])) * max_list)*100)
+                st.write(progress)
 
                 if page ==1:
                     driver.get(url + '/' + url_category + '/')
