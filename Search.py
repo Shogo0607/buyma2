@@ -379,7 +379,7 @@ if st.sidebar.button("検索開始"):
 
                             elif "分前" in item_list_question_time_text:
                                 delta = int(item_list_question_time_text.strip("分前"))
-                                past = now - datetime.timedelta(minute = delta)
+                                past = now - datetime.timedelta(minutes = delta)
                                 past = str(now.year)+"/"+str(now.month)+"/"+str(now.day)+" "+str(now.hour)+":"+str(now.minute)
                                 item_list.append(item_list_text)
                                 item_url_list.append(item_url)
