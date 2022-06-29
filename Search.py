@@ -25,9 +25,14 @@ st.set_page_config(page_title="BUYMA 問い合わせ検索ツール")
 st.title("BUYMA Search tool")
 
 st.sidebar.title("BUYMA Search tool")
-
+options = list()
 max_list =  int(st.sidebar.number_input("1Pageの検索商品数",value=2))
-max_page =   int(st.sidebar.number_input("検索ページ数",value=2))
+# for ii in range(1,45):
+#     options.append(ii)
+
+# max_page =   int(st.sidebar.select_slider("検索ページ数",options=options,value=))
+max_page = st.sidebar.slider('検索ページ数',1, 45, (1, 45))
+
 item = st.sidebar.selectbox("ブランド名",['HERMES','CHANEL','CHRISTIAN DIOR','LUIS VUITTON'])
 category = st.sidebar.selectbox("カテゴリ名",['レディースファッション','メンズファッション','ベビー・キッズ','ビューティー','ライフスタイル','スポーツ'])
 if category == 'レディースファッション':
