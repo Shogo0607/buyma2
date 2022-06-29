@@ -303,7 +303,7 @@ if st.sidebar.button("検索開始"):
                 # driver.find_element(By.XPATH, item_list_xpath).click()
                 element = driver.find_element(By.XPATH, item_list_xpath)
                 driver.execute_script("arguments[0].click();", element)
-                time.sleep(2)
+                time.sleep(1)
                 with st.spinner(item_list_text+"の問い合わせを検索中..."):
                     bar.progress(progress)
                     item_url = str(driver.current_url)
@@ -325,7 +325,7 @@ if st.sidebar.button("検索開始"):
 
                     inq_url = item_url+'inq'
                     driver.get(inq_url+"/")
-                    time.sleep(2)
+                    time.sleep(1)
                     inq_max_num_xpath = '//*[@id="tabmenu_inqcnt"]'
                     try:
                         inq_max_num = driver.find_element(By.XPATH, inq_max_num_xpath).text
@@ -341,7 +341,7 @@ if st.sidebar.button("検索開始"):
                         else:
                             try:
                                 driver.get(inq_url+"_"+str(inq_page)+"/")
-                                time.sleep(2)
+                                time.sleep(1)
                             except:
                                 break
                         for inq_num in range(1,11):
